@@ -1,0 +1,12 @@
+{
+  "name": "Prism",
+  "start_url": "https://prismreader.app",
+  "description": "Content sharing and blogging platform, decentralized.",
+  "icons": [
+    {
+      "src": "https://prismreader.app/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
