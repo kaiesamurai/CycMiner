@@ -113,3 +113,24 @@ What's also interesting is that after step 4, if CycMiner doesn't follow through
 In order to have external Lightning nodes that grant access to specific pieces of the platform, we needed an API layer on top of Lightning and we needed a way for the association between that paywall and the content on the platform to be known.
 
 Blockstack's Gaia storage service helps us solve the latter problem. Each post on CycMiner is stored as a `Document` model. For any content owner that wishes to charge for access to their content, they must store a URI that points to a Boltwall compatible API for retrieving invoices and authorizing requests as well as a _Caveat Key_ (i.e. a shared password that only CycMiner and the content owner know. This shared privacy is accomplished with the same (A)Symmetrical Key scheme outlined above). If a payment is made to a Boltwall node, a _discharge macaroon_ is shared in the response. This discharge macaroon is signed with the shared caveat key so that CycMiner can verify it came from the owner of the content and the discharge macaroon is tied directly to the original request for the content via a root macaroon.
+
+## Inspiration
+The need for a decentralized platform that empowers content creators with direct micro-payments and secure, self-sovereign paywalls inspired the creation of CycMiner. We wanted to leverage blockchain technology to create a fair, trustless, and scalable solution.
+
+## What it does
+CycMiner allows content creators to securely store their content, set up decentralized paywalls, and receive direct micro-payments via the Lightning Network. It ensures that payments are trustlessly split between the platform and content creators, providing a fair and transparent monetization model.
+
+## How we built it
+We built CycMiner using Blockstack for decentralized identity and storage, the Lightning Network for micro-payments, and Bitcoin for secure transactions. We implemented Boltwall for managing paywalls and leveraged symmetric and asymmetric key encryption for secure content sharing.
+
+## Challenges we ran into
+We faced challenges in implementing selective content revealing, ensuring secure split payments with a single user interaction, and creating a user-friendly interface for managing paywalls and payments without centralizing control.
+
+## Accomplishments that we're proud of
+We are proud of developing a fully decentralized content platform that empowers creators, successfully implementing trustless split payments, and ensuring that content remains secure and under the control of its creators at all times.
+
+## What we learned
+We learned the intricacies of integrating multiple blockchain technologies, the importance of user control in decentralized platforms, and the potential of micro-payments to revolutionize content monetization.
+
+## What's next for CycMiner
+Next, we plan to expand CycMiner to support mainnet operations, improve the user interface for easier adoption, and explore additional features such as decentralized content discovery and enhanced analytics for creators.
